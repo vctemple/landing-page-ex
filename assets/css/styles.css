@@ -68,7 +68,7 @@ h6{
 }
 
 .content{
-    max-width: 1200px;
+    max-width: 120rem;
     margin: 0 auto;
     padding: var(--gap);
 }
@@ -85,7 +85,8 @@ h6{
     left: 0;
     right: 0;
     width: 100%;
-    border-bottom: 2px solid var(--gray-pt);
+    border-bottom: 0.2rem solid var(--gray-pt);
+    z-index: 1;
 }
 
 .menu-content{
@@ -108,6 +109,9 @@ h6{
 .menu ul{
     list-style: none;
     display: flex;
+}
+.menu li:hover{
+    background-color: var(--gray-pt);
 }
 
 .menu ul li a{
@@ -133,4 +137,35 @@ h6{
 .menu ul li a:hover::after{
     width: 50%;
     left: 25%;
+}
+
+.menu-space{
+    height: 6.4rem;
+}
+
+.intro{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+    text-align: center;
+    gap: var(--gap);
+    align-items: center;
+    top: -5rem;
+}
+
+.intro-text, .intro-img{
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+}
+
+.intro p{
+    margin-top: 3rem;
+    text-align: justify;
+}
+
+.intro-img img, .intro-img svg{
+    max-width: 100%;
+    height: auto;
 }
