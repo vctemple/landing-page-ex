@@ -3,6 +3,7 @@
     --purple-pt: #460B6A;
     --white-pt: #F6F3FF;
     --gray-pt: #eee;
+    --black-pt: #000;
     --gap: 3rem;
 }
 
@@ -13,6 +14,7 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 /*
@@ -52,7 +54,7 @@ h5{
 }
 
 h6{
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .bg1{
@@ -65,6 +67,11 @@ h6{
 .bgwhite{
     background-color: var(--white-pt);
     color: var(--blue-pt);
+}
+
+.bgblack{
+    background-color: var(--black-pt);
+    color: var(--gray-pt);
 }
 
 .content{
@@ -144,20 +151,18 @@ h6{
 }
 
 .intro{
-    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     gap: var(--gap);
     align-items: center;
-    top: -5rem;
 }
 
 .intro-text, .intro-img{
     display: flex;
     justify-content: center;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
 }
 
 .intro p{
@@ -168,4 +173,71 @@ h6{
 .intro-img img, .intro-img svg{
     max-width: 100%;
     height: auto;
+}
+
+.top3{
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.top3 p{
+    margin-top: 3rem;
+    text-align: justify;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top3 h3{
+    color: var(--purple-pt);
+    margin-bottom: 2rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--gap);
+    margin-top: 5rem;
+    max-width: 100rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid h6{
+    color: var(--purple-pt);
+}
+
+.gallery{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    min-height: 100vh;
+    text-align: center;
+    gap: var(--gap);
+    align-items: center;
+}
+
+.gallery h5{
+    margin-bottom: 5rem;
+}
+
+.gallery p{
+    text-align: justify;
+}
+
+.gallery-img{
+    width: 100%;
+    overflow: hidden;
+    max-width: 24rem;
+    max-height: 24rem;
+}
+
+.gallery-img img{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery-img img:hover{
+    transform: scale(1.12) rotate(7deg);
 }
