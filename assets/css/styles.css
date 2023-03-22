@@ -241,3 +241,32 @@ h6{
 .gallery-img img:hover{
     transform: scale(1.12) rotate(7deg);
 }
+
+.table{
+    margin-top: 5rem;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+table{
+    min-width: 50rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table td, table th{
+    white-space: nowrap;
+    padding: 0.5rem;
+    text-align: center;
+    border: 0.1rem solid lightgrey
+}
+
+tfoot td, table th{
+    background-color: var(--blue-pt);
+    color: #eee;
+}
+
+.contact-img img, .contact-img svg{
+    max-width: 100%;
+    height: auto;
+}
