@@ -58,6 +58,10 @@ h6{
     font-size: 3rem;
 }
 
+.close-menu{
+    display: none;
+}
+
 .bg1{
     background-image: url('../img/pattern-bg.svg');
     background-size: cover;
@@ -244,7 +248,7 @@ h6{
 }
 
 .table{
-    margin-top: 5rem;
+    margin-top: 10rem;
     overflow: hidden;
     overflow-x: auto;
 }
@@ -321,4 +325,107 @@ fieldset{
 .footer{
     padding: 1rem;
     text-align: center;
+}
+
+.goto-top{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--gray-pt);
+    width: 5rem;
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--purple-pt);
+    transform: rotate(-90deg);
+    text-decoration: none;
+    font-size: 2.5rem;
+    transition: all 200ms ease-in-out;
+}
+
+.goto-top:hover{
+    background-color: var(--blue-pt);
+    color: var(--white-pt);
+}
+
+@media (max-width: 1090px){
+    .grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 860px){
+    .gallery{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 680px){
+    .intro{
+        grid-template-columns: 1fr;
+    } 
+}
+
+@media (max-width: 580px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px){
+    .menu-space{
+        display: none;
+    }
+    
+    .menu {
+        bottom: 0;
+        text-align: center;
+        opacity: 0.95;
+        display: none;
+    }
+    .menu-content, .menu-content ul{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content{
+        height: 100vh;
+    }
+
+    .menu-content ul li a{
+        font-size: 20px;
+        padding-top: 5rem;
+    }
+
+    .close-menu-label::after{
+        content: "☰";
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background: var(--gray-pt);
+        color: var(--blue-pt);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+        border-radius: 1rem;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+    
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    .intro-text{
+        margin-top: 3rem;
+    }
 }

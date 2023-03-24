@@ -11,11 +11,19 @@
     <title>Home</title>
 </head>
 <body>
-   <aside class="menu">
+    <input type="checkbox" id="close-menu"
+    class="close-menu" aria-label="Close menu"
+     role="button" aria-pressed="true">
+
+    <label for="close-menu" class="close-menu-label"
+     title="close menu">
+    </label>
+   
+    <aside class="menu">
     <div class="menu-content content">
         <h1>Logo</h1>
         <nav>
-            <ul>
+            <ul onclick="getElementById('close-menu').checked = false;">
                 <li><a href="#intro">Intro</a></li>
                 <li><a href="#top3">Top 3</a></li>
                 <li><a href="#gallery">Gallery</a></li>
@@ -35,7 +43,7 @@
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam ipsa consequatur sed pariatur libero ratione, dolorem laudantium quas optio ad molestiae veritatis totam! Repudiandae facere atque omnis exercitationem dolores placeat sed dolor illum sapiente minima, nobis ut velit odit laboriosam cumque eius. Adipisci neque ab repudiandae officia perferendis fuga obcaecati.</p>
             </div>
             <div class="intro-img">
-                <img src="assets/img/img-intro.svg"">
+                <img src="assets/img/img-intro.svg" alt="background with blue and purple squares">
             </div>
         </div>
     </div>
@@ -162,7 +170,7 @@
                 <h3>Contact us!</h3>
             </div>
             <div class="contact-img">
-                <img src="assets/img/img-contact.svg"">
+                <img src="assets/img/img-contact.svg" alt="background with blue and purple squares">
             </div>
             <div class="forms">
                 <fieldset>
@@ -182,7 +190,7 @@
                          id="email" placeholder="email@email.com">
                     </div>
                     <div class="form-group">
-                        <label for="phone">Your phone number</label>
+                        <label for="phone">Phone Number</label>
                         <input type="text" name="phone"
                          id="phone" placeholder="(xx)xxxxx-xxxx">
                     </div>
@@ -202,5 +210,7 @@
     <div id="footer" class="bgwhite footer">
         <p>Victor Temple</p>
     </div>
+
+    <a class="goto-top" href="#">➤</a>
 </body>
 </html>
