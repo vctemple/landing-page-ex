@@ -10,6 +10,7 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html{
@@ -269,4 +270,55 @@ tfoot td, table th{
 .contact-img img, .contact-img svg{
     max-width: 100%;
     height: auto;
+}
+
+.forms{
+    border: none;
+    gap: var(--gap);
+    padding: 0;
+    grid-column: span 2;
+}
+
+fieldset{
+    border: none;
+}
+
+.form-group label{
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+.form-group input,
+.form-group textarea{
+    border: none;
+    background: var(--white-pt);
+    padding: 1.5rem 1.5rem;
+    width: 100%;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.3rem;
+}
+
+
+.form-group button{
+    border: 0.3rem solid var(--white-pt);
+    background: none;
+    color: var(--white-pt);
+    padding: 1.5rem 1.5rem;
+    cursor: pointer;
+    transition: all 200ms ease-in-out;
+    border-radius: 0.3rem;
+}
+
+.form-group button:hover{
+    background: var(--white-pt);
+    color: var(--blue-pt);
+}
+
+.footer{
+    padding: 1rem;
+    text-align: center;
 }
